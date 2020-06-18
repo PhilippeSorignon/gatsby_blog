@@ -7,39 +7,32 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import "./layout.css"
+import { Helmet } from "react-helmet"
+import Navigation from "./navigation"
+import Footer from "./footer"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+import "../../static/vendor/bootstrap/css/bootstrap.min.css"
+import "../../static/vendor/fontawesome-free/css/all.min.css"
+import "../../static/css/clean-blog.min.css"
+
+const Layout = ({ children }, props) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <Helmet>
+        <title>Clean Blog</title>
+        <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="/vendor/fontawesome-free/css/all.min.css" />
+        <link rel="stylesheet" type="text/css" href="/css/clean-blog.min.css" />
+        <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />
+
+        </Helmet>
+
+      <Navigation />
+      <main>{children}</main>
+      <Footer />
     </>
   )
 }

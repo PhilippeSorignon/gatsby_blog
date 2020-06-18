@@ -1,42 +1,30 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React from "react";
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+class Header extends React.Component {
+  render() {
+    return (
+      <header
+        className="masthead"
+        style={{
+          backgroundImage: "url('img/" + this.props.image + ".jpg')"
+        }}
+      >
+        <div className="overlay" />
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 col-md-10 mx-auto">
+              <div className="site-heading">
+                <h1>{ this.props.title }</h1>
+                <span className="subheading">
+                  { this.props.subtitle }
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    );
+  }
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default Header;
