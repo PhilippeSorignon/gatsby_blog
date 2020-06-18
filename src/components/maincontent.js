@@ -15,6 +15,7 @@ class MainContent extends React.Component {
                     allPosts {
                       edges {
                         node {
+                          id
                           title
                           content
                         }
@@ -28,7 +29,7 @@ class MainContent extends React.Component {
                   return (
                     <>
                       <div className="post-preview" key={i}>
-                        <a href="post.html">
+                        <a href={`/article/${post.node.id}`}>
                           <h2 className="post-title">
                             {post.node.title}
                           </h2>

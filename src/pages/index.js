@@ -6,7 +6,7 @@ import MainContent from "../components/maincontent"
 const IndexPage = () => (
   <>
     <Layout>
-      <Header title="Clean Blog" subtitle="A Blog Made With Gatsby" image="home-bg" />
+      <Header title="Clean Blog" subtitle="A Blog Made With Gatsby" image="img/home-bg.jpg" />
       <MainContent />
     </Layout>
   </>

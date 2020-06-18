@@ -6,7 +6,7 @@ class Header extends React.Component {
       <header
         className="masthead"
         style={{
-          backgroundImage: "url('img/" + this.props.image + ".jpg')"
+          backgroundImage: "url('" + this.props.image + "')"
         }}
       >
         <div className="overlay" />

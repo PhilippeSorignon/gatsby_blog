@@ -5,7 +5,7 @@ import Header from "../components/header"
 const IndexPage = () => (
   <>
     <Layout>
-      <Header title="About Me" subtitle="This is what I do." image="about-bg" />
+      <Header title="About Me" subtitle="This is what I do." image="img/about-bg.jpg" />
       <div className="container">
         <div className="row">
           <div className="col-lg-8 col-md-10 mx-auto">
