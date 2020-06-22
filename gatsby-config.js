@@ -35,7 +35,7 @@ module.exports = {
         // This is the field under which it's accessible
         fieldName: "flask",
         // URL to query from
-        url: "http://127.0.0.1:5000/graphql",
+        url: "https://cryptic-caverns-03759.herokuapp.com/graphql",
       },
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
