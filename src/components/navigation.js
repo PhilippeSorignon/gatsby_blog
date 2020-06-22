@@ -28,9 +28,6 @@ class Navigation extends React.Component {
         </div>
       </div>
     </nav>
-      <Helmet>
-        <script src="js/clean-blog.min.js"></script>
-      </Helmet>
       </>
     );
   }
