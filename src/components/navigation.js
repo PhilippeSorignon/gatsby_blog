@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby"
-import { Helmet } from "react-helmet"
 
 class Navigation extends React.Component {
   render() {
@@ -28,9 +27,6 @@ class Navigation extends React.Component {
         </div>
       </div>
     </nav>
-    <Helmet>
-      <script src="/js/clean-blog.min.js"></script>
-    </Helmet>
       </>
     );
   }
